@@ -18,6 +18,8 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 import requests
 import time
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
 
 SCRAPED_URLS = set()  # To keep track of already scraped URLs
 MAX_DEPTH = 1  # Set a maximum depth to avoid excessive recursion
